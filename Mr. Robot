@@ -1,0 +1,39 @@
+User: root
+PW: ?
+
+
+
+
+                                    ##### FLAG 1 #####
+
+1. Enumeration: (Network Scan)
+        nmap 10.10.30.0/24
+
+   Results: 
+        IP: 10.10.30.50
+        22/tcp   closed   ssh
+        80/tcp   open     http
+        443/tcp  open     https
+
+
+2. Enumerate Website: (Directory Scan)
+        gobuster dir -u http://10.10.30.50/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x cgi,html,js,css,py,php,sh,txt
+
+   Results:
+        /robots.txt
+
+3. Go to Website w/ directory
+        10.10.30.50/robots.txt
+
+   Results:
+        User-agent: *
+        fsocity.dic
+        key-1-of-3.txt
+
+4. Go to Website w/ new directory
+        10.10.30.50/key-1-of-3.txt
+
+
+
+                                    ##### FLAG 2 #####
+  
