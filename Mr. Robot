@@ -1,5 +1,5 @@
-User: root
-PW: ?
+User: elliot
+PW: ER28-0652
 
 
 
@@ -91,3 +91,12 @@ PW: ?
 
         D. Force connection
                 10.10.30.50/safdsfhsdakfhsdkfhsk (forces 404 error and allows local to listen)
+
+        E. Locate Flag 2
+                cd /home
+                results: robot (directory)
+
+                crack md5 file for password
+                pw: abcdefghijklmnopqrstuvwxyz
+
+                results: 
