@@ -99,4 +99,19 @@ PW: ER28-0652
                 crack md5 file for password
                 pw: abcdefghijklmnopqrstuvwxyz
 
-                results: 
+        F. Try to log in as Robot
+                su robot
+                results: must be run from a terminal
+
+                1. cd /opt/bitnami/apps/wordpress/htdocs$ 
+                2. python -c ‘import pty; pty.spawn(”/bin/sh”)’
+                su robot
+
+        G. Flag 2:
+                822c73956184f694993bede3eb39f959
+               
+
+
+                                    ##### FLAG 3 #####
+
+1.
