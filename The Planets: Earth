@@ -1,0 +1,32 @@
+
+                                    ##### FLAG 1 #####
+
+1. Enumeration Network
+
+   A. nmap 10.10.30.0/24
+
+      Results: 
+        IP: 10.10.30.59
+        22/tcp   open   ssh   
+        80/tcp   open   http  
+        443/tcp  open   https 
+
+
+    B. nmap -sV 10.10.30.59
+         
+      Results: 
+        IP: 10.10.30.59
+        22/tcp   open   ssh   OpenSSH 8.6 (protocol 2.0)
+        80/tcp   open   http  Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9)
+        443/tcp  open   https Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9)
+
+  
+2. Enumeration Web Content
+
+    A. Gobuster
+
+
+
+
+
+
