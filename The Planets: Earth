@@ -21,9 +21,9 @@
         443/tcp  open   https Apache httpd 2.4.51 ((Fedora) OpenSSL/1.1.1l mod_wsgi/4.7.1 Python/3.9)
 
   
-2. Enumeration Web Content
+2. Web Application Analysis:
 
-    A. Gobuster
+    A. Gobuster/
 
 
 
