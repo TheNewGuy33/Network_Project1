@@ -1,1 +1,24 @@
+##  Find IP address
 
+1. scan entire network:
+    nmap 10.10.30.0/24
+
+2. scan machine for open ports
+    nmap -sV 10.10.30.60 -v
+
+3. browser
+
+http://10.10.30.60
+https://10.10.30.60:10000
+https://10.10.30.60:20000
+
+4. decrypt code from http://10.10.30.60
+
+  decryption tool: decode.fr
+  decryption type: brainfuck
+
+5. Find user name
+
+  Tool: enum4linux
+
+  User: cyber
