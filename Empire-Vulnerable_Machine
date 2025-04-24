@@ -75,3 +75,18 @@ cd /home/cyber
 4. extract new archive
 
     ./tar -xvf old_pass
+
+    Password:     Ts&4&YurgtRX(=~h
+
+5. Log into Usermin 
+
+    https://10.10.30.60:10000
+
+6. Find Root Flag
+
+    Results:
+    3mp!r3{You_Manage_To_BreakOut_From_My_System_Congratulations}
+
+
+
+
