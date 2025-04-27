@@ -1,0 +1,21 @@
+1. NMAP
+
+    Results: 
+            Port 22 (ssh)
+            port 80 (http)
+
+2. NMAP Directories
+
+    dirb http://10.10.30.61 
+
+    search:    http://10.10.30.61/install
+
+
+3. Install and Connect 
+
+    systemctl start mysql
+
+    create database for "qdPM 9.1 installation"
+    
+
+      
