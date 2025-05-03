@@ -1,6 +1,6 @@
 1. NMAP
 
-    Results: 
+    NMAP Results: 
             Port 22 (ssh)
             port 80 (http)
 
@@ -16,6 +16,8 @@
     systemctl start mysql
 
     create database for "qdPM 9.1 installation"
+
+
     
 
       
