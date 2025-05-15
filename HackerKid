@@ -1,11 +1,9 @@
 1. NMAP 10.10.30.0/24
 
     NMAP Results: 
-            Port 22 (ssh)
-            port 80 (http)
+            
 
 2. NMAP Directories
 
     dirb http://10.10.30.61 
 
-    search:    http://10.10.30.61/install
