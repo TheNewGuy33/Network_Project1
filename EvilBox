@@ -1,0 +1,23 @@
+1. NMAP 10.10.20.0/24
+
+    Results: 10.10.20.50
+            
+
+2. dirb http://10.10.30.61 
+
+    Results (4): 
+            http://10.10.20.50/index.html
+            http://10.10.20.50/robots.txt
+            http://10.10.20.50/secret
+            http://10.10.20.50/secret/index.html
+
+3. dirb http://10.10.20.50/secret
+
+    Results: http://10.10.20.50/secret/index.html
+
+4. dirbuster
+
+    http:10.10.20.50/secret/
+    directory-list-lowercase-2.3-medium.txt
+
+    Results: /secret/evil.php
