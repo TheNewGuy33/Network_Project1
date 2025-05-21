@@ -42,5 +42,11 @@
 
     chmod 600 key
 
-8. ssh
+8. ssh2john
+
+    ssh2john key > key.hash
+
+9. crach key.hash
+
+    john key.hash --wordlist=rockyou.txt
 
