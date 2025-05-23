@@ -1,8 +1,27 @@
-NMAP
+1. Enumeration: (Network Scan)
 
   nmap 10.10.20.0/24
 
-  results:
+  results: 10.10.20.53
 
+  Open Ports:
+
+      80/tcp open http
+      139/tcp open netbios-ssn
+      445/tcp open microsoft-ds
+
+2.Enumerate IP
+
+    A. dirb http://10.10.20.53
+
+          results:
+
+                  a. index.html
+                  b. robots.txt  
+                            User-agent: *
+                            Disallow: /crossroads.png
+                  c. server-status
+
+    
         
-*** need to update dhclient to connect to network
+
