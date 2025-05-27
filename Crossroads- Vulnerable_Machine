@@ -22,6 +22,19 @@
                             Disallow: /crossroads.png
                   c. server-status
 
-    
-        
+3. Enumerate PNG file
 
+    A. zsteg crossroads.png
+    
+          results:
+
+                  b2,b,msb,xy  ..  file: OpenPGP Secret Key
+
+
+4. Enumerate PNG file
+
+    A. binwalk -e crossroads.png
+
+          results: Zlib compressed data, default compression
+
+          created file: _crossroads.png.extracted
