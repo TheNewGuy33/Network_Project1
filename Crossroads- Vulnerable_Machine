@@ -38,3 +38,11 @@
           results: Zlib compressed data, default compression
 
           created file: _crossroads.png.extracted
+
+    B. zsteg b2,b,msb,xy crossroads.png > crossr.gpg
+
+    C. Verify the type of data extracted
+
+          file crossr.gpg
+
+          results: crossr.gpg: OpenPGP Secret Key 
