@@ -73,3 +73,5 @@
 
           put smbscript.sh
 
+          result: connected to target as root
+
