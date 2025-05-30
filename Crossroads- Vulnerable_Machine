@@ -53,8 +53,9 @@
 
     password: bradley1
 
-6. Download smb file
+6. Download smb file and View
 
     get smb.conf
 
+    cat smb.conf
 
