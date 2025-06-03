@@ -1,4 +1,4 @@
-1. Enumeration: (Network Scan)
+s1. Enumeration: (Network Scan)
 
   nmap 10.10.20.0/24
 
@@ -74,4 +74,8 @@
           put smbscript.sh
 
           launches connection to receiving device via netcat
+
+8. Find root flag
+
+  
 
