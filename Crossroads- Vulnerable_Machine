@@ -73,9 +73,9 @@ es1. Enumeration: (Network Scan)
 
     C. Target Device
 
-          put smbscript.sh
+          put smb.sh
 
-          Connects to host
+          Connects to host via shell
 
 8. Find root flag
 
