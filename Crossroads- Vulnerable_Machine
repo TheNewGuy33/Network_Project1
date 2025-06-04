@@ -1,4 +1,4 @@
-s1. Enumeration: (Network Scan)
+es1. Enumeration: (Network Scan)
 
   nmap 10.10.20.0/24
 
@@ -58,6 +58,8 @@ s1. Enumeration: (Network Scan)
     get smb.conf
 
     cat smb.conf
+
+    nano file: replace smbscript.sh > smb.sh
 
 7. Connect VIA nc 
 
