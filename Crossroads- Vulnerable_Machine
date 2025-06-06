@@ -1,4 +1,4 @@
-es1. Enumeration: (Network Scan)
+1. Enumeration: (Network Scan)
 
   nmap 10.10.20.0/24
 
