@@ -7,5 +7,5 @@ Open Ports:
 - 2222/tcp open EtherNetP-1
 - 8022/tcp open oa-system
 
-Exploits:
+Gobuster dir -u http:10.10.20.54 -w /usr/share/wordlists
 
